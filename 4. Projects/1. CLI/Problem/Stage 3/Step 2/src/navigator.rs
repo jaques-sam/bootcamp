@@ -270,7 +270,7 @@ mod tests {
         prompts.delete_story = Box::new(|| true);
 
         nav.set_prompts(prompts);
-        
+
         nav.handle_action(Action::DeleteStory { epic_id, story_id }).unwrap();
 
         let db_state = db.read_db().unwrap();
